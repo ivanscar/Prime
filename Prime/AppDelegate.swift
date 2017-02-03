@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Prime
 //
-//  Created by Alexander on 03.02.17.
+//  Created by Ivan on 03.02.17.
 //  Copyright © 2017 Ivan S. All rights reserved.
 //
 

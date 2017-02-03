@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					11C9E0B71E44FB7D00D593B4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D59QT7WFUJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D59QT7WFUJ;
 				INFOPLIST_FILE = Prime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.Prime;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D59QT7WFUJ;
 				INFOPLIST_FILE = Prime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.Prime;
