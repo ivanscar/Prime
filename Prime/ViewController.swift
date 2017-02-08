@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputNumberField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
@@ -22,11 +22,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField==inputNumberField {
+            inputNumberField.text=""
+        }
+    }
+    
     @IBAction func onCalculateButtonPress(_ sender: Any) {
         if let val = Int(inputNumberField.text!) {
             if val > 1 {
                 let primeNumbers = primes(n: val+1);
-                resultLabel.text = "\(summ(list: primeNumbers))";
+                resultLabel.text = "Сумма = \(summ(list: primeNumbers))";
             }else{
                 resultLabel.text = "Введите положительное число > 1"
             }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,24 +22,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANp-QJ-R1X">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ANp-QJ-R1X">
                                 <rect key="frame" x="16" y="70" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.80293898799504482" green="1" blue="0.67495128536151472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GLO-UY-tXB"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtJ-Bx-4rF">
-                                <rect key="frame" x="16" y="133" width="343" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtJ-Bx-4rF">
+                                <rect key="frame" x="16" y="130" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.80692438336501404" green="1" blue="0.68661121819711401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="ehd-91-k5j"/>
+                                    <constraint firstAttribute="height" constant="30" id="ehd-91-k5j"/>
                                 </constraints>
-                                <state key="normal" title="Посчитать"/>
+                                <state key="normal" title="Посчитать">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onCalculateButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gm6-b1-yVF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-3I-RZl">
-                                <rect key="frame" x="180" y="192" width="14" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сумма = " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-3I-RZl">
+                                <rect key="frame" x="16" y="190" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.80032709091675802" green="1" blue="0.66065610178082856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I3q-4W-tqE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,11 +58,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Fh-3I-RZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0WL-W0-TKf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xtJ-Bx-4rF" secondAttribute="trailing" id="Ddf-w8-ZLE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Fh-3I-RZl" secondAttribute="trailing" id="EkY-vK-C7o"/>
                             <constraint firstItem="ANp-QJ-R1X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="J4k-p5-FQZ"/>
-                            <constraint firstItem="1Fh-3I-RZl" firstAttribute="top" secondItem="xtJ-Bx-4rF" secondAttribute="bottom" constant="25" id="N7n-Tq-6jp"/>
-                            <constraint firstItem="xtJ-Bx-4rF" firstAttribute="top" secondItem="ANp-QJ-R1X" secondAttribute="bottom" constant="33" id="czz-OH-lRG"/>
+                            <constraint firstItem="1Fh-3I-RZl" firstAttribute="top" secondItem="xtJ-Bx-4rF" secondAttribute="bottom" constant="30" id="N7n-Tq-6jp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1Fh-3I-RZl" secondAttribute="leading" id="QvO-Kp-P1O"/>
+                            <constraint firstItem="xtJ-Bx-4rF" firstAttribute="top" secondItem="ANp-QJ-R1X" secondAttribute="bottom" constant="30" id="czz-OH-lRG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ANp-QJ-R1X" secondAttribute="leading" id="lyp-0F-BgI"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xtJ-Bx-4rF" secondAttribute="leading" id="qpW-nh-O6r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ANp-QJ-R1X" secondAttribute="trailing" id="zvO-Nz-SaY"/>
@@ -64,6 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>
